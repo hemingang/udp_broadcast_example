@@ -15,7 +15,7 @@
 int communicate(int sck, char * host, char * port);
 
 int main(int argc, char * argv[]) {
-  if (argc < 2) {
+  if (argc < 3) {
     fprintf(stderr, "usage:\n\t%s [remote address] [remote port]\n", argv[0]);
     return -1;
   }
