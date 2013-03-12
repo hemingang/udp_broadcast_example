@@ -55,6 +55,7 @@ int communicate(int sck, char * host, char * port) {
     fprintf(stderr, "Unable to 'sendto': %s\n", strerror(errno));
     return -2;
   }
+  from_len = sizeof(from);
   len = recvfrom(sck, buffer, sizeof(buffer), 0, (struct sockaddr *)&from, &from_len);
   if (errno) {
     fprintf(stderr, "Unable to 'recvfrom': %s\n", strerror(errno));
