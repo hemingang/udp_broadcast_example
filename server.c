@@ -22,7 +22,7 @@ int listen_loop(
     int local_sck); /* The socket we respond to detection messages on. */
 
 int main(int argc, char * argv[]) {
-  if (argc < 2) {
+  if (argc < 3) {
     fprintf(stderr, "usage:\n\t%s [bind address] [bind port]\n", argv[0]);
     return -1;
   }
